@@ -5,6 +5,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { EnvioComponent } from './components/envio/envio.component';
+import { ClienteComponent } from './components/cliente-tabla/cliente.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     {path: 'empleado',component:EmpleadoComponent},
     {path: 'envio',component:EnvioComponent},
+    {path: 'cliente',component:ClienteComponent},
     { path: '**', redirectTo: '/login' } // Asegúrate de agregar el '/' antes de 'login'
 ];
 

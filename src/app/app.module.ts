@@ -15,6 +15,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { EnvioComponent } from './components/envio/envio.component';
+import { ClienteComponent } from './components/cliente-tabla/cliente.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EnvioComponent } from './components/envio/envio.component';
     HomeComponent,
     EmpleadoComponent,
     EnvioComponent,
+    ClienteComponent,
 
   ],
   imports: [

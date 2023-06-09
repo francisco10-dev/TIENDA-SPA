@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+    <h1>Tabla de Cliente</h1><hr>
+    <!-- Botón "Agregar nuevo" -->
+    <button   class="btn btn-primary mb-3">Agregar nuevo</button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Cedula</th>
+          <th>Nombre</th>
+          <th>fecha nacimiento</th>
+          <th>email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.cedula }}</td>
+          <td>{{ cliente.nombre }}</td>
+          <td>{{ cliente.fechaNac }}</td>
+          <td>{{ cliente.email }}</td>
+          <td>
+            <!-- Botones "Editar" y "Eliminar" -->
+            <button class="btn btn-primary" style= "margin: 5px;">Editar</button>
+            <button class="btn btn-danger" style= "margin: 5px;">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
