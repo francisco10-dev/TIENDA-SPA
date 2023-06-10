@@ -23,7 +23,8 @@
           <td>
             <!-- Botones "Editar" y "Eliminar" -->
             <button class="btn btn-primary" style= "margin: 5px;">Editar</button>
-            <button class="btn btn-danger" style= "margin: 5px;">Eliminar</button>
+            <button (click)="confirmarEliminacion(cliente.cedula)" class="btn btn-danger" style= "margin: 5px;">Eliminar</button>
+
           </td>
         </tr>
       </tbody>

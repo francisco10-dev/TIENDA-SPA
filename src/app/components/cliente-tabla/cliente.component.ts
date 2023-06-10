@@ -4,6 +4,7 @@ import{ ClienteService } from '../../services/cliente.service';
 import { timer } from 'rxjs';
 import { server } from '../../services/global';
 import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente',
@@ -36,5 +37,40 @@ export class ClienteComponent {
       }
     })
   }
+
+  eliminarCliente(cedula: string) {
+    this._clienteService.delete(cedula).subscribe({
+      next: (response: any) => {
+        console.log('Cliente eliminado correctamente:', response);
+        this.getAll();
+        Swal.fire('¡Registro eliminado!', 'Cliente eliminado correctamente!', 'success');
+      },
+      error: (error: any) => {
+        console.error('Error al eliminar el cliente:', error);
+        Swal.fire('¡Error!', 'Error al eliminar el cliente!', 'error');
+      }
+    });
+  }
+  
+  
+  
+    confirmarEliminacion(cedula: string) {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción no se puede deshacer',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      confirmButtonColor: '#dc3545', 
+      cancelButtonText: 'Cancelar',
+      cancelButtonColor: '#28a745' 
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // La confirmación de eliminación fue aceptada
+        this.eliminarCliente(cedula);
+      }
+    });
+  }
 }
 
+  
