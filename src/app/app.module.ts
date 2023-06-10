@@ -6,6 +6,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -14,8 +17,10 @@ import { AppRoutingModule } from './app.routing'; // Importa tu archivo persona
 import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
-import { EnvioComponent } from './components/envio/envio.component';
+import { EnvioComponent } from './components/envio-tabla/envio.component';
 import { ClienteComponent } from './components/cliente-tabla/cliente.component';
+import { ConfirmDialogComponent } from './components/confirm-component/confirm-dialog-component.component';
+import { EnvioRegistroComponent } from './components/envio-registro/envio-registro.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,8 @@ import { ClienteComponent } from './components/cliente-tabla/cliente.component';
     EmpleadoComponent,
     EnvioComponent,
     ClienteComponent,
-
+    ConfirmDialogComponent,
+    EnvioRegistroComponent
   ],
   imports: [
     MatSlideToggleModule,
@@ -37,6 +43,9 @@ import { ClienteComponent } from './components/cliente-tabla/cliente.component';
     MatListModule,
     MatSidenavModule,
     HttpClientModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

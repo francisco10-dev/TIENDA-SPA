@@ -1,10 +1,8 @@
-
 <div class="container mt-4">
   <div class="card">
     <div class="card-body">
     <h1>Tabla de Envíos</h1><hr>
-    <!-- Botón "Agregar nuevo" -->
-    <button   class="btn btn-primary mb-3">Agregar nuevo</button>
+    <button class="btn btn-primary mb-3">Agregar nuevo</button>
     <table class="table">
       <thead>
         <tr>
@@ -22,9 +20,8 @@
           <td>{{ envio.chofer }}</td>
           <td>{{ envio.vehiculo }}</td>
           <td>
-            <!-- Botones "Editar" y "Eliminar" -->
-            <button class="btn btn-primary">Editar</button>
-            <button class="btn btn-danger">Eliminar</button>
+            <button class="btn btn-primary" style= "margin-right: 5px;">Editar</button>
+            <button (click)="confirmarEliminacion(envio.idEnvio)" class="btn btn-danger">Eliminar</button>
           </td>
         </tr>
       </tbody>

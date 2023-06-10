@@ -4,7 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
-import { EnvioComponent } from './components/envio/envio.component';
+import { EnvioComponent } from './components/envio-tabla/envio.component';
 import { ClienteComponent } from './components/cliente-tabla/cliente.component';
 
 const routes: Routes = [
