@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../confirm-component/confirm-dialog-component.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EnvioRegistroComponent } from '../envio-registro/envio-registro.component';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -51,32 +52,30 @@ export class EnvioComponent implements OnInit {
       response => {
         console.log('Envío eliminado correctamente:', response);
         this.getAll();
-        this.mostrarNotificacion("Envío eliminado correctamente");
+        Swal.fire('¡Registro eliminado!', 'Envío eliminado correctamente!', 'success');
       },
       error => {
         console.error('Error al eliminar el envío:', error);
-        this.mostrarNotificacion("Error al eliminar el envío");
+        Swal.fire('¡Error!', 'Error al eliminar el envío!', 'error');
       }
     );
   }
 
+
   confirmarEliminacion(envioId: number) {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      width: '400px',
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (result === true) {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción no se puede deshacer',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // La confirmación de eliminación fue aceptada
         this.eliminarEnvio(envioId);
       }
     });
   }
 
-  mostrarNotificacion(mensaje: string) {
-    this._snackBar.open(mensaje, 'Cerrar', {
-      duration: 3000, // Duración en milisegundos
-      horizontalPosition: 'center',
-      verticalPosition: 'top',
-    });
-  }
-  
 }
