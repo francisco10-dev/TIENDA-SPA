@@ -10,6 +10,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +24,8 @@ import { EnvioComponent } from './components/envio-tabla/envio.component';
 import { ClienteComponent } from './components/cliente-tabla/cliente.component';
 import { ConfirmDialogComponent } from './components/confirm-component/confirm-dialog-component.component';
 import { EnvioRegistroComponent } from './components/envio-registro/envio-registro.component';
+import { ClienteRegistroComponent } from './components/cliente/cliente-registro/cliente-registro.component';
+import { ClienteActualizarComponent } from './components/cliente/cliente-actualizar/cliente-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { EnvioRegistroComponent } from './components/envio-registro/envio-regist
     EnvioComponent,
     ClienteComponent,
     ConfirmDialogComponent,
-    EnvioRegistroComponent
+    EnvioRegistroComponent,
+    ClienteRegistroComponent,
+    ClienteActualizarComponent,
   ],
   imports: [
     MatSlideToggleModule,
@@ -45,7 +52,10 @@ import { EnvioRegistroComponent } from './components/envio-registro/envio-regist
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

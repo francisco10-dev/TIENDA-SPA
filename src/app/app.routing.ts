@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { EnvioComponent } from './components/envio-tabla/envio.component';
 import { ClienteComponent } from './components/cliente-tabla/cliente.component';
+import { ClienteRegistroComponent } from './components/cliente/cliente-registro/cliente-registro.component';
+import { ClienteActualizarComponent } from './components/cliente/cliente-actualizar/cliente-actualizar.component';
+
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +18,10 @@ const routes: Routes = [
     {path: 'empleado',component:EmpleadoComponent},
     {path: 'envio',component:EnvioComponent},
     {path: 'cliente',component:ClienteComponent},
+    { path: 'cliente-registro', component: ClienteRegistroComponent }, 
+    { path: 'cliente-actualizar', component: ClienteActualizarComponent },
+    
+
     { path: '**', redirectTo: '/login' } // Asegúrate de agregar el '/' antes de 'login'
 ];
 

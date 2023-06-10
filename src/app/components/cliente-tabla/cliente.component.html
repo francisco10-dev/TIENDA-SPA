@@ -3,7 +3,7 @@
     <div class="card-body">
     <h1>Tabla de Cliente</h1><hr>
     <!-- Botón "Agregar nuevo" -->
-    <button   class="btn btn-primary mb-3">Agregar nuevo</button>
+    <button class="btn btn-primary mb-3" [routerLink]="['/cliente-registro']">Agregar nuevo</button>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -22,9 +22,8 @@
           <td>{{ cliente.email }}</td>
           <td>
             <!-- Botones "Editar" y "Eliminar" -->
-            <button class="btn btn-primary" style= "margin: 5px;">Editar</button>
+            <button class="btn btn-primary" style="margin: 5px;" [routerLink]="['/cliente-actualizar']">Editar</button>
             <button (click)="confirmarEliminacion(cliente.cedula)" class="btn btn-danger" style= "margin: 5px;">Eliminar</button>
-
           </td>
         </tr>
       </tbody>
