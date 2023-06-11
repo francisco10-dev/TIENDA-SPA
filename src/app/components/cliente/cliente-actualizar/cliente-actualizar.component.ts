@@ -3,7 +3,7 @@ import { Cliente } from 'src/app/models/cliente';
 import{ ClienteService } from '../../../services/cliente.service';
 import{timer} from'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente-actualizar',
@@ -20,9 +20,14 @@ export class ClienteActualizarComponent {
     private _router: Router,
     private _route: ActivatedRoute
   ){
-    this.cliente = new Cliente("504460214", "Hola", new Date("2002-10-10"), "Jordy@gmail");
+    this.cliente = new Cliente("", "", new Date("2002-10-10"), "");
     this.status=-1; 
+    this._route.params.subscribe(params => {
+      const cedula = params['cedula'];
+      this.buscarCliente(cedula);
+    });
   }
+
 
   onSubmit(form:any){
     console.log(this.cliente);
@@ -39,7 +44,7 @@ export class ClienteActualizarComponent {
           }
         );
         form.reset();
-        this.mainTable();
+        this.mainTable(response.message);
       },
       error:(err:Error)=>{
         this.status=2;       
@@ -49,15 +54,33 @@ export class ClienteActualizarComponent {
             console.log(err);
           });
           form.reset();
-          this.mainTable();
+          this.mainTable(err.message);
         }
     });
   }
 
-  mainTable(){
-    setTimeout(() => {
-      this._router.navigate(['/cliente']);
-    }, 2000);
+  buscarCliente(clienteId: string): void {
+    this._clienteService.getByCed(clienteId).subscribe({
+      next: (response: any) => {
+        if (response.status == 200) {
+          this.cliente = response.data;
+          this.cliente.fechaNac = new Date(response.data.fechaNac);
+        }
+      },
+      error: (err: Error) => {
+        console.error(err.message);
+        //Swal.fire(err.message);
+      }
+    });
   }
 
+  mainTable(mensaje:string){
+    Swal.fire({
+      icon: 'info',
+      text: mensaje,
+      timer: 3000, // Duración en milisegundos (3 segundos en este caso)
+      showConfirmButton: false
+    });
+    this._router.navigate(['/cliente']);
+  }
 }

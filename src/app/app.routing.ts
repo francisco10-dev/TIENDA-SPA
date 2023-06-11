@@ -19,7 +19,7 @@ const routes: Routes = [
     {path: 'envio',component:EnvioComponent},
     {path: 'cliente',component:ClienteComponent},
     { path: 'cliente-registro', component: ClienteRegistroComponent }, 
-    { path: 'cliente-actualizar', component: ClienteActualizarComponent },
+    { path: 'cliente-actualizar/:cedula', component: ClienteActualizarComponent },
     
 
     { path: '**', redirectTo: '/login' } // Asegúrate de agregar el '/' antes de 'login'

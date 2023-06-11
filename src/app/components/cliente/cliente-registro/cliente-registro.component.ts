@@ -19,7 +19,7 @@ export class ClienteRegistroComponent {
     private _router: Router,
     private _route: ActivatedRoute
   ){
-    this.cliente = new Cliente("504460214", "Hola", new Date("2002-10-10"), "Jordy@gmail");
+    this.cliente = new Cliente("", "", new Date("2002-10-10"), "");
     this.status=-1;
   }
   onSubmit(form:any){

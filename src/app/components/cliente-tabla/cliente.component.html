@@ -22,7 +22,7 @@
           <td>{{ cliente.email }}</td>
           <td>
             <!-- Botones "Editar" y "Eliminar" -->
-            <button class="btn btn-primary" style="margin: 5px;" [routerLink]="['/cliente-actualizar']">Editar</button>
+            <button class="btn btn-primary" style="margin: 5px;" [routerLink]="['/cliente-actualizar', cliente.cedula]">Editar</button>
             <button (click)="confirmarEliminacion(cliente.cedula)" class="btn btn-danger" style= "margin: 5px;">Eliminar</button>
           </td>
         </tr>

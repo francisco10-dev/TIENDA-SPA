@@ -38,4 +38,12 @@ import { Cliente } from '../models/cliente';
         return this._http.delete(this.url+'cliente/'+clienteId, { headers: header });
     }
 
+    //getByID
+    getByCed(clienteId: string): Observable<any>{
+        let header=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        return this._http.get(this.url+'cliente/'+clienteId,{headers:header});
+    }
+
+
+
 }
