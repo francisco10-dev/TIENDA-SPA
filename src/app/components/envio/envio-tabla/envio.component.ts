@@ -4,7 +4,6 @@ import { EnvioService } from 'src/app/services/envio.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Envio } from 'src/app/models/envio';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../confirm-component/confirm-dialog-component.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EnvioRegistroComponent } from '../envio-registro/envio-registro.component';
 import Swal from 'sweetalert2';

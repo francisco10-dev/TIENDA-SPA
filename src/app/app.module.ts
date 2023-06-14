@@ -20,12 +20,12 @@ import { AppRoutingModule } from './app.routing'; // Importa tu archivo persona
 import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
-import { EnvioComponent } from './components/envio-tabla/envio.component';
-import { ClienteComponent } from './components/cliente-tabla/cliente.component';
-import { ConfirmDialogComponent } from './components/confirm-component/confirm-dialog-component.component';
-import { EnvioRegistroComponent } from './components/envio-registro/envio-registro.component';
+import { EnvioComponent } from './components/envio/envio-tabla/envio.component';
+import { ClienteComponent } from './components/cliente/cliente-tabla/cliente.component';
+import { EnvioRegistroComponent } from './components/envio/envio-registro/envio-registro.component';
 import { ClienteRegistroComponent } from './components/cliente/cliente-registro/cliente-registro.component';
 import { ClienteActualizarComponent } from './components/cliente/cliente-actualizar/cliente-actualizar.component';
+import { EnvioActualizarComponent } from './components/envio/envio-actualizar/envio-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +36,10 @@ import { ClienteActualizarComponent } from './components/cliente/cliente-actuali
     EmpleadoComponent,
     EnvioComponent,
     ClienteComponent,
-    ConfirmDialogComponent,
     EnvioRegistroComponent,
     ClienteRegistroComponent,
     ClienteActualizarComponent,
+    EnvioActualizarComponent,
   ],
   imports: [
     MatSlideToggleModule,

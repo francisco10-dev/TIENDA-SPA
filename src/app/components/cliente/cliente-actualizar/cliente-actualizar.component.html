@@ -3,17 +3,6 @@
     <div class="col-md-12 mt-3">
         <h1>Actualizar Cliente</h1>
         <h5>Actualizar datos</h5>
-        <div [ngSwitch]="status">
-          <div *ngSwitchCase="0" class="alert alert-success">
-            <p>Actualizacion exitosa!!!</p>
-          </div>
-          <div *ngSwitchCase="1" class="alert alert-danger">
-            <p>Correo registrado previamente!!!</p>
-          </div>
-          <div *ngSwitchCase="2" class="alert alert-warning">
-            <p>Error de conexión al servidor!!!</p>
-          </div>
-        </div>
         <form class="col-md-6 mr-auto ml-auto" #actualizarForm="ngForm" (ngSubmit)="onSubmit(actualizarForm)">
           <div class="form-group">
             <label>Cedula</label>

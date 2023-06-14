@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Cliente } from 'src/app/models/cliente';
-import{ ClienteService } from '../../services/cliente.service';
+import{ ClienteService } from '../../../services/cliente.service';
 import { timer } from 'rxjs';
-import { server } from '../../services/global';
+import { server } from '../../../services/global';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 

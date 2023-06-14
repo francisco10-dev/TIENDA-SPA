@@ -36,24 +36,9 @@ export class ClienteActualizarComponent {
     this.cliente.fechaNac = this.fechaFormateada;
     this._clienteService.update(this.cliente).subscribe({
       next:(response:any)=>{
-        this.status=0;
-        counter.subscribe(
-          n=>{
-            this.status=-1;
-            console.log(response);
-          }
-        );
-        form.reset();
         this.mainTable(response.message);
       },
       error:(err:Error)=>{
-        this.status=2;       
-        counter.subscribe(
-          n=>{
-            this.status=-1;
-            console.log(err);
-          });
-          form.reset();
           this.mainTable(err.message);
         }
     });

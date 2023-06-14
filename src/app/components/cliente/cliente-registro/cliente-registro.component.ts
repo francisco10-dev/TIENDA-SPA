@@ -3,7 +3,8 @@ import { Cliente } from 'src/app/models/cliente';
 import{ ClienteService } from '../../../services/cliente.service';
 import{timer} from'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import Swal from 'sweetalert2';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-cliente-registro',
@@ -29,26 +30,14 @@ export class ClienteRegistroComponent {
     this.cliente.fechaNac = this.fechaFormateada;
     this._clienteService.register(this.cliente).subscribe({
       next:(response:any)=>{
-        this.status=0;
-        counter.subscribe(
-          n=>{
-            this.status=-1;
-            console.log(response);
-          }
-        );
-        form.reset();
+        console.log(response.message);
+        Swal.fire('¡Registro guardado!', response.message, 'success');
         this.mainTable();
       },
-      error:(err:Error)=>{
-        this.status=2;       
-        counter.subscribe(
-          n=>{
-            this.status=-1;
-            console.log(err);
-          });
-          form.reset();
-          this.mainTable();
-        }
+      error:(err:HttpErrorResponse)=>{
+        //console.log(err.error.message);
+        Swal.fire('¡Error!', err.error.message + ', favor verifica los datos y vuelve a intentarlo', 'error');
+      }
     });
   }
 
