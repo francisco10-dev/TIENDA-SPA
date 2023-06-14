@@ -36,4 +36,10 @@ import { Envio} from '../models/envio';
         let header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
         return this._http.delete(this.url+'envio/'+envioId, { headers: header });
     }
+
+    //getByID
+    getById(envioId: string): Observable<any>{
+        let header=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        return this._http.get(this.url+'envio/'+envioId,{headers:header});
+    }
 }

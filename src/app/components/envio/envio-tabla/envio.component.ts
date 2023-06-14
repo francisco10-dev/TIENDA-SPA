@@ -31,35 +31,38 @@ export class EnvioComponent implements OnInit {
     this.getAll();
   }
 
-  getAll(): void {
-    this._envioService.getAll().subscribe(
-      (response: any) => {
-        if (response.status === 200) {
-          console.log(response.data);
-          this.envios = response.data;
+  getAll(){
+    this._envioService.getAll().subscribe({
+      next:(response:any)=>{
+        if(response.status==200){
+          this.envios = response.data.map((envio: any) => {
+            return {
+              ...envio,
+              chofer: envio.chofer.nombre
+            };
+          });
         }
       },
-      (error: HttpErrorResponse) => {
-        console.error('Error al obtener los clientes:', error);
-        this.envios = [];
+      error:(err:Error)=>{
+        console.log(err.message);
       }
-    );
+    })
   }
 
-  eliminarEnvio(envioId: number) {
-    this._envioService.delete(envioId).subscribe(
-      response => {
-        console.log('Envío eliminado correctamente:', response);
-        this.getAll();
-        Swal.fire('¡Registro eliminado!', 'Envío eliminado correctamente!', 'success');
+  eliminarEnvio(envioId: number){
+    this._envioService.delete(envioId).subscribe({
+      next:(response:any)=>{
+        if(response.status==200){
+          this.getAll();
+          Swal.fire('¡Registro eliminado!', 'Envío eliminado correctamente!', 'success');
+        }
       },
-      error => {
-        console.error('Error al eliminar el envío:', error);
+      error:(err:Error)=>{
+        console.error('Error al eliminar el envío:', err);
         Swal.fire('¡Error!', 'Error al eliminar el envío!', 'error');
       }
-    );
+    })
   }
-
 
   confirmarEliminacion(envioId: number) {
     Swal.fire({

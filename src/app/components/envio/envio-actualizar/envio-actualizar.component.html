@@ -1,1 +1,41 @@
-<p>envio-actualizar works!</p>
+<div class="card">
+    <div class="card-body">
+      <div class="col-md-12 mt-3">
+          <h1>Actualización de Envíos</h1>
+          <h5>Registro de datos</h5>
+          <form class="col-md-6 mr-auto ml-auto" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <br>
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" name="idEnvio"  class="form-control"
+                 [(ngModel)]="envio.idEnvio" placeholder="Ingrese" disabled="true">
+            </div>
+            <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" name="direccion"  class="form-control"
+                required pattern="[a-zA-Z ]+" [(ngModel)]="envio.direccion" placeholder="Ingrese">
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Chofer</label><br>
+              <select name="chofer" class="form-control form-select" [(ngModel)]="envio.chofer">
+                <option [value]="null" disabled selected>Seleccione</option>
+                <option *ngFor="let chofer of choferes" [value]="chofer.idEmpleado">{{ chofer.nombre }}</option>
+              </select>       
+            </div>  
+            <div class="form-group">
+             <label>Vehiculo (Unidad)</label>
+             <select name="vehiculo" class="form-control form-select" [(ngModel)]="envio.vehiculo">
+                <option [value]="null" disabled selected>Seleccione</option>
+                <option *ngFor="let vehiculo of vehiculos" [value]="vehiculo.numUnidad">{{ vehiculo.numUnidad }}</option>
+              </select> 
+            </div>
+            <br>
+            <input type="submit" value="Registrarse" class="btn btn-success" style= "margin: 5px;" [disabled]="registerForm.invalid">
+            <button class="btn btn-danger" style= "margin: 5px;" [routerLink]="['/envio']">Cancelar</button>
+          </form>
+      </div>
+    </div>
+  </div>
+
+

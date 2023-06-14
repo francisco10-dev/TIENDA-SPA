@@ -1,8 +1,9 @@
-export class Envio{
+export class Envio {
     constructor(
-        public idEnvio:number,
-        public direccion:string,
-        public chofer:number,
-        public vehiculo:number
-    ){}
-}
+      public idEnvio: number = 0,
+      public direccion: string = '',
+      public chofer: number | null = null,
+      public vehiculo: number | null = null
+    ) {}
+  }
+  
