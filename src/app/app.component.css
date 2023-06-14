@@ -5,6 +5,10 @@
     border-radius:  0px 16px   16px 0px; /* Bordes redondeados en las esquinas */
     padding: 20px;
     width: 300px;
+    position: sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
   }
 
 .content {
