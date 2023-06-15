@@ -19,13 +19,15 @@ import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app.routing'; // Importa tu archivo personalizado
 import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
-import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { EnvioComponent } from './components/envio/envio-tabla/envio.component';
 import { ClienteComponent } from './components/cliente/cliente-tabla/cliente.component';
 import { EnvioRegistroComponent } from './components/envio/envio-registro/envio-registro.component';
 import { ClienteRegistroComponent } from './components/cliente/cliente-registro/cliente-registro.component';
 import { ClienteActualizarComponent } from './components/cliente/cliente-actualizar/cliente-actualizar.component';
 import { EnvioActualizarComponent } from './components/envio/envio-actualizar/envio-actualizar.component';
+import { EmpleadoTablaComponent } from './components/empleado/empleado-tabla/empleado-tabla.component';
+import { EmpleadoRegistroComponent } from './components/empleado/empleado-registro/empleado-registro.component';
+import { EmpleadoActualizarComponent } from './components/empleado/empleado-actualizar/empleado-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,15 @@ import { EnvioActualizarComponent } from './components/envio/envio-actualizar/en
     LoginComponent,
     RegistroComponent,
     HomeComponent,
-    EmpleadoComponent,
     EnvioComponent,
     ClienteComponent,
     EnvioRegistroComponent,
     ClienteRegistroComponent,
     ClienteActualizarComponent,
     EnvioActualizarComponent,
+    EmpleadoTablaComponent,
+    EmpleadoRegistroComponent,
+    EmpleadoActualizarComponent,
   ],
   imports: [
     MatSlideToggleModule,
@@ -55,7 +59,7 @@ import { EnvioActualizarComponent } from './components/envio/envio-actualizar/en
     ReactiveFormsModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

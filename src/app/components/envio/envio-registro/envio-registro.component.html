@@ -1,9 +1,6 @@
-<div class="card">
-    <div class="card-body">
-      <div class="col-md-12 mt-3">
-          <h1>Registro de Envíos</h1>
-          <h5>Registro datos</h5>
-          <form class="col-md-6 mr-auto ml-auto" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+
+          <form class="col-md-6 mr-auto ml-auto card shadow-sm rounded" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <h1>Registro de Envíos</h1>
             <br>
             <div class="form-group">
                 <label>Dirección</label>
@@ -26,10 +23,10 @@
               </select> 
             </div>
             <br>
-            <input type="submit" value="Registrar" class="btn btn-success" style= "margin: 5px;" [disabled]="registerForm.invalid">
-            <button class="btn btn-danger" style= "margin: 5px;" [routerLink]="['/envio']">Cancelar</button>
+            <div class="btn-container">
+              <input type="submit" value="Registrar" class="btn btn-success" style= "margin: 5px;" [disabled]="registerForm.invalid">
+              <button class="btn btn-danger" style= "margin: 5px;" [routerLink]="['/envio']">Cancelar</button>
+            </div>
           </form>
-      </div>
-    </div>
-  </div>
+
 

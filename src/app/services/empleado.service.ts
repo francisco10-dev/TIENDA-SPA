@@ -42,4 +42,9 @@ export class EmpleadoService {
     let header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
     return this._http.delete(this.url + 'empleado/' + empleadoId, { headers: header });
   }
+
+  getById(empleadoId: number): Observable<any>{
+    let header=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+    return this._http.get(this.url+'empleado/'+empleadoId,{headers:header});
+}
 }
