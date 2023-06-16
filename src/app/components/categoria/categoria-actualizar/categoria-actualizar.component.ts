@@ -1,33 +1,31 @@
 import { Component } from '@angular/core';
-import { Proveedor } from 'src/app/models/proveedor';
-import{ ProveedorService } from '../../../services/proveedor.service';
+import { Categoria } from 'src/app/models/categoria';
+import{ CategoriaService } from '../../../services/categoria.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
-  selector: 'app-proveedor-actualizar',
-  templateUrl: './proveedor-actualizar.component.html',
-  styleUrls: ['./proveedor-actualizar.component.css']
+  selector: 'app-categoria-actualizar',
+  templateUrl: './categoria-actualizar.component.html',
+  styleUrls: ['./categoria-actualizar.component.css']
 })
-export class ProveedorActualizarComponent {
-  public proveedor:Proveedor;
-  public fechaFormateada:any;
+export class CategoriaActualizarComponent {
+  public categoria:Categoria;
   constructor(
-    private _proveedorService:ProveedorService,
+    private _categoriaService:CategoriaService,
     private _router: Router,
     private _route: ActivatedRoute
   ){
-    this.proveedor = new Proveedor();
+    this.categoria = new Categoria();
     this._route.params.subscribe(params => {
-      const idProveedor = params['idProveedor'];
-      this.buscarProveedor(idProveedor);
+      const idCategoria = params['idCategoria'];
+      this.buscarCategoria(idCategoria);
     });
   }
-
   onSubmit(form:any){
-    console.log(this.proveedor);
-    this._proveedorService.update(this.proveedor).subscribe({
+    console.log(this.categoria);
+    this._categoriaService.update(this.categoria).subscribe({
       next:(response:any)=>{
         console.log(response.message);
         Swal.fire('¡Registro actualizado!', response.message, 'success');
@@ -40,11 +38,17 @@ export class ProveedorActualizarComponent {
     });
   }
 
-  buscarProveedor(proveedorId: number): void {
-    this._proveedorService.getById(proveedorId).subscribe({
+    mainTable(){
+    setTimeout(() => {
+      this._router.navigate(['/categoria']);
+    }, 2000);
+  }
+
+  buscarCategoria(categoriaId: number): void {
+    this._categoriaService.getById(categoriaId).subscribe({
       next: (response: any) => {
         if (response.status == 200) {
-          this.proveedor = response.data;
+          this.categoria = response.data;
         }
       },
       error: (err: Error) => {
@@ -52,11 +56,5 @@ export class ProveedorActualizarComponent {
       }
     });
   }
-
-  mainTable(){
-    setTimeout(() => {
-      this._router.navigate(['/proveedor']);
-    }, 2000);
-  }
-
 }
+

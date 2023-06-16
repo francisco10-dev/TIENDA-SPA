@@ -3,6 +3,12 @@
     <h1>Actualizar datos de proveedor</h1>
     <br>
     <div class="form-group">
+        <label>ID</label>
+        <input type="text" name="idProveedor"  class="form-control"
+        required pattern="[0-9]+" [(ngModel)]="proveedor.idProveedor" disabled>
+    </div>
+    <br>
+    <div class="form-group">
         <label>Nombre compañia</label>
         <input type="text" name="nombreCompania"  class="form-control"
         required pattern="[a-zA-Z ]+" [(ngModel)]="proveedor.nombreCompania">

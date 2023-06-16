@@ -15,8 +15,8 @@ import { Proveedor } from '../models/proveedor';
     //create
     register(proveedor:Proveedor):Observable<any>{
         console.log(proveedor);
-        let envioJson=JSON.stringify(proveedor);
-        let params='data='+envioJson;
+        let proveedorJson=JSON.stringify(proveedor);
+        let params='data='+proveedorJson;
         let header=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
         return this._http.post(this.url+'proveedor',params,{headers:header});
     }
@@ -27,8 +27,8 @@ import { Proveedor } from '../models/proveedor';
     }
     //update
     update(proveedor: Proveedor): Observable<any> {
-        let envioJson = JSON.stringify(proveedor);
-        let params = 'data=' + envioJson;
+        let proveedorJson = JSON.stringify(proveedor);
+        let params = 'data=' + proveedorJson;
         let header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
         return this._http.put(this.url+'proveedor/'+proveedor.idProveedor, params, { headers: header });
     }

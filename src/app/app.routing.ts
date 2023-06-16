@@ -15,6 +15,9 @@ import { EmpleadoActualizarComponent } from './components/empleado/empleado-actu
 import { TablaProveedorComponent } from './components/proveedor/tabla-proveedor/tabla-proveedor.component';
 import { ProveedorRegistroComponent } from './components/proveedor/proveedor-registro/proveedor-registro.component';
 import { ProveedorActualizarComponent } from './components/proveedor/proveedor-actualizar/proveedor-actualizar.component';
+import { CategoriaTablaComponent } from './components/categoria/categoria-tabla/categoria-tabla.component';
+import { CategoriaRegistroComponent } from './components/categoria/categoria-registro/categoria-registro.component';
+import { CategoriaActualizarComponent } from './components/categoria/categoria-actualizar/categoria-actualizar.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -33,6 +36,10 @@ const routes: Routes = [
     { path: 'proveedor',component:TablaProveedorComponent},
     { path: 'proveedor-registro',component:ProveedorRegistroComponent},
     { path: 'proveedor-actualizar/:idProveedor',component:ProveedorActualizarComponent},
+    { path: 'categoria',component:CategoriaTablaComponent},
+    { path: 'categoria-registro',component:CategoriaRegistroComponent},
+    { path: 'categoria-actualizar/:idCategoria',component:CategoriaActualizarComponent},
+
     
     { path: '**', redirectTo: '/login' } // Asegúrate de agregar el '/' antes de 'login'
 ];
