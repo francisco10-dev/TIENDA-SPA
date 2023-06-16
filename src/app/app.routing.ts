@@ -12,8 +12,9 @@ import { EnvioActualizarComponent } from './components/envio/envio-actualizar/en
 import { EmpleadoTablaComponent } from './components/empleado/empleado-tabla/empleado-tabla.component';
 import { EmpleadoRegistroComponent } from './components/empleado/empleado-registro/empleado-registro.component';
 import { EmpleadoActualizarComponent } from './components/empleado/empleado-actualizar/empleado-actualizar.component';
-
-
+import { TablaProveedorComponent } from './components/proveedor/tabla-proveedor/tabla-proveedor.component';
+import { ProveedorRegistroComponent } from './components/proveedor/proveedor-registro/proveedor-registro.component';
+import { ProveedorActualizarComponent } from './components/proveedor/proveedor-actualizar/proveedor-actualizar.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,6 +30,10 @@ const routes: Routes = [
     { path: 'cliente-actualizar/:cedula', component: ClienteActualizarComponent },
     { path: 'envio-registro', component:EnvioRegistroComponent},
     { path: 'envio-actualizar/:idEnvio', component:EnvioActualizarComponent},
+    { path: 'proveedor',component:TablaProveedorComponent},
+    { path: 'proveedor-registro',component:ProveedorRegistroComponent},
+    { path: 'proveedor-actualizar/:idProveedor',component:ProveedorActualizarComponent},
+    
     { path: '**', redirectTo: '/login' } // Asegúrate de agregar el '/' antes de 'login'
 ];
 

@@ -42,12 +42,12 @@ export class EnvioActualizarComponent {
     this._envioService.update(this.envio).subscribe({
       next:(response:any)=>{
         console.log(response.message);
-        Swal.fire('¡Registro guardado!', response.message, 'success');
+        Swal.fire('¡Registro actualizado!', response.message, 'success');
         this.mainTable();
       },
       error:(err:HttpErrorResponse)=>{
         //console.log(err.error.message);
-        Swal.fire('¡Error!', err.error.message + ', favor verifica los datos y vuelve a intentarlo', 'error');
+        Swal.fire('¡Error!', err.error.message + ', favor verifica los datos y vuelve a intentarlo.', 'error');
       }
     });
   }

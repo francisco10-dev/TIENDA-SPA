@@ -32,7 +32,7 @@ export class EmpleadoActualizarComponent {
     this._empleadoService.update(this.empleado).subscribe({
       next:(response:any)=>{
         console.log(response.message);
-        Swal.fire('¡Registro guardado!', response.message, 'success');
+        Swal.fire('¡Registro actualizado!', response.message, 'success');
         this.mainTable();
       },
       error:(err:HttpErrorResponse)=>{

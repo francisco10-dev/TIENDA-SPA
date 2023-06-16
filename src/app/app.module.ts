@@ -28,6 +28,9 @@ import { EnvioActualizarComponent } from './components/envio/envio-actualizar/en
 import { EmpleadoTablaComponent } from './components/empleado/empleado-tabla/empleado-tabla.component';
 import { EmpleadoRegistroComponent } from './components/empleado/empleado-registro/empleado-registro.component';
 import { EmpleadoActualizarComponent } from './components/empleado/empleado-actualizar/empleado-actualizar.component';
+import { TablaProveedorComponent } from './components/proveedor/tabla-proveedor/tabla-proveedor.component';
+import { ProveedorRegistroComponent } from './components/proveedor/proveedor-registro/proveedor-registro.component';
+import { ProveedorActualizarComponent } from './components/proveedor/proveedor-actualizar/proveedor-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { EmpleadoActualizarComponent } from './components/empleado/empleado-actu
     EmpleadoTablaComponent,
     EmpleadoRegistroComponent,
     EmpleadoActualizarComponent,
+    TablaProveedorComponent,
+    ProveedorRegistroComponent,
+    ProveedorActualizarComponent,
   ],
   imports: [
     MatSlideToggleModule,

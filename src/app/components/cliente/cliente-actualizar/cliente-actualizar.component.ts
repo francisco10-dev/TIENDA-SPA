@@ -4,6 +4,7 @@ import{ ClienteService } from '../../../services/cliente.service';
 import{timer} from'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-cliente-actualizar',
@@ -36,11 +37,13 @@ export class ClienteActualizarComponent {
     this.cliente.fechaNac = this.fechaFormateada;
     this._clienteService.update(this.cliente).subscribe({
       next:(response:any)=>{
-        this.mainTable(response.message);
+        console.log(response.message);
+        Swal.fire('¡Registro actualizado!', response.message, 'success');
+        this.mainTable();
       },
-      error:(err:Error)=>{
-          this.mainTable(err.message);
-        }
+      error:(err:HttpErrorResponse)=>{
+        Swal.fire('¡Error!', err.error.message + ', favor verifica los datos y vuelve a intentarlo', 'error');
+      }
     });
   }
 
@@ -59,13 +62,9 @@ export class ClienteActualizarComponent {
     });
   }
 
-  mainTable(mensaje:string){
-    Swal.fire({
-      icon: 'info',
-      text: mensaje,
-      timer: 3000, // Duración en milisegundos (3 segundos en este caso)
-      showConfirmButton: false
-    });
-    this._router.navigate(['/cliente']);
+  mainTable(){
+    setTimeout(() => {
+      this._router.navigate(['/cliente']);
+    }, 2000);
   }
 }
