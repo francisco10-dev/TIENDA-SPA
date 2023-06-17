@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
@@ -34,6 +36,7 @@ import { ProveedorActualizarComponent } from './components/proveedor/proveedor-a
 import { CategoriaTablaComponent } from './components/categoria/categoria-tabla/categoria-tabla.component';
 import { CategoriaRegistroComponent } from './components/categoria/categoria-registro/categoria-registro.component';
 import { CategoriaActualizarComponent } from './components/categoria/categoria-actualizar/categoria-actualizar.component';
+import { BotComponent } from './components/chatBot/bot/bot.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,7 @@ import { CategoriaActualizarComponent } from './components/categoria/categoria-a
     CategoriaTablaComponent,
     CategoriaRegistroComponent,
     CategoriaActualizarComponent,
+    BotComponent,
   ],
   imports: [
     MatSlideToggleModule,
@@ -72,6 +76,7 @@ import { CategoriaActualizarComponent } from './components/categoria/categoria-a
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
