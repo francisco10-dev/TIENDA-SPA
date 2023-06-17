@@ -3,6 +3,7 @@ import { Cliente } from 'src/app/models/cliente';
 import{ ClienteService } from '../../../services/cliente.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { FilterComponent } from '../../filter/filter.component';
 
 @Component({
   selector: 'app-cliente',
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./cliente.component.css'],
   providers:[ClienteService]
 })
-export class ClienteComponent {
+export class ClienteComponent extends FilterComponent {
   cliente: any;
   public clientes:Array<Cliente>;
   constructor(
@@ -18,6 +19,7 @@ export class ClienteComponent {
     private _router: Router,
     private _route: ActivatedRoute
   ) {
+    super();
     this.clientes=[];
     this.cliente = new Cliente("504460214", "Hola", new Date("2002-10-10"), "Jordy@gmail");
     this.getAll();
@@ -69,6 +71,7 @@ export class ClienteComponent {
       }
     });
   }
+
 }
 
   

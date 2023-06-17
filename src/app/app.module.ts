@@ -37,6 +37,8 @@ import { CategoriaTablaComponent } from './components/categoria/categoria-tabla/
 import { CategoriaRegistroComponent } from './components/categoria/categoria-registro/categoria-registro.component';
 import { CategoriaActualizarComponent } from './components/categoria/categoria-actualizar/categoria-actualizar.component';
 import { BotComponent } from './components/chatBot/bot/bot.component';
+import { SearchPipe } from './components/filter/search.pipe';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { BotComponent } from './components/chatBot/bot/bot.component';
     CategoriaRegistroComponent,
     CategoriaActualizarComponent,
     BotComponent,
+    SearchPipe,
+    FilterComponent,
   ],
   imports: [
     MatSlideToggleModule,

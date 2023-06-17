@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EnvioRegistroComponent } from '../envio-registro/envio-registro.component';
 import Swal from 'sweetalert2';
+import { FilterComponent } from '../../filter/filter.component';
 
 
 @Component({
@@ -14,7 +15,7 @@ import Swal from 'sweetalert2';
   templateUrl: './envio.component.html',
   styleUrls: ['./envio.component.css']
 })
-export class EnvioComponent implements OnInit {
+export class EnvioComponent extends FilterComponent implements OnInit {
   envios: any[] = [];
   public envio:Envio;
   public modalAbierto: boolean = false;
@@ -24,6 +25,7 @@ export class EnvioComponent implements OnInit {
     public dialog: MatDialog,
     private _snackBar: MatSnackBar
   ){
+    super();
     this.envio=new Envio(1,'',4,1);
   }
 

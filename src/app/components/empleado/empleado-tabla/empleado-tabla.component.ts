@@ -3,13 +3,14 @@ import { Empleado } from 'src/app/models/empleado';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 import { EmpleadoService } from 'src/app/services/empleado.service';
+import { FilterComponent } from '../../filter/filter.component';
 
 @Component({
   selector: 'app-empleado-tabla',
   templateUrl: './empleado-tabla.component.html',
   styleUrls: ['./empleado-tabla.component.css']
 })
-export class EmpleadoTablaComponent {
+export class EmpleadoTablaComponent extends FilterComponent{
     public empleado:Empleado;
     public empleados:Array<Empleado>;
   
@@ -19,6 +20,7 @@ export class EmpleadoTablaComponent {
       private _router: Router,
       private _route: ActivatedRoute
     ){
+      super();
       this.empleados=[];
       this.empleado = new Empleado("", "", new Date("2002-10-10"), new Date("2002-10-10"), "","");
       this.getAll();

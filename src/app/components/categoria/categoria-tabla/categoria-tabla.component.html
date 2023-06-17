@@ -6,6 +6,8 @@
         <!-- Botón "Agregar nuevo" -->
         <button class="btn btn-success mb-3 agregar" [routerLink]="['/categoria-registro']">Agregar</button>
         </div>
+        <input class="form-control search" type="text" placeholder="Buscar" [(ngModel)]="searchText">
+        <br>
         <table class="table table-hover">
           <thead>
             <tr>
@@ -16,7 +18,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let categoria of categorias" class="registros">
+            <tr *ngFor="let categoria of categorias | search: searchText" class="registros">
               <td class="registro">{{ categoria.idCategoria }}</td>
               <td class="registro">{{ categoria.nombre }}</td>
               <td class="registro">{{ categoria.descripcion }}</td>

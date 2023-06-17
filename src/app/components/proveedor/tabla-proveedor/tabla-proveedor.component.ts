@@ -5,13 +5,14 @@ import { timer } from 'rxjs';
 import { server } from '../../../services/global';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { FilterComponent } from '../../filter/filter.component';
 @Component({
   selector: 'app-tabla-proveedor',
   templateUrl: './tabla-proveedor.component.html',
   styleUrls: ['./tabla-proveedor.component.css'],
   providers:[ProveedorService]
 })
-export class TablaProveedorComponent {
+export class TablaProveedorComponent extends FilterComponent{
   proveedor: Proveedor;
   public proveedores:Array<Proveedor>;
   constructor(
@@ -19,6 +20,7 @@ export class TablaProveedorComponent {
     private _router: Router,
     private _route: ActivatedRoute
   ) {
+    super();
     this.proveedores=[];
     this.proveedor = new Proveedor();
     this.getAll();

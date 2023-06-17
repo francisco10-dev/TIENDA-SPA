@@ -5,6 +5,7 @@ import { timer } from 'rxjs';
 import { server } from '../../../services/global';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { FilterComponent } from '../../filter/filter.component';
 
 @Component({
   selector: 'app-categoria-tabla',
@@ -12,7 +13,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./categoria-tabla.component.css'],
   providers:[CategoriaService]
 })
-export class CategoriaTablaComponent {
+export class CategoriaTablaComponent extends FilterComponent {
   categoria: Categoria;
   public categorias:Array<Categoria>;
   constructor(
@@ -20,6 +21,7 @@ export class CategoriaTablaComponent {
     private _router: Router,
     private _route: ActivatedRoute
   ) {
+    super();
     this.categorias=[];
     this.categoria = new Categoria();
     this.getAll();

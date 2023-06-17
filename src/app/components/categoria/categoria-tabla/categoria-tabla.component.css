@@ -126,6 +126,9 @@
     overflow: auto;
     padding: 1rem; /* Ajusta el padding según tus necesidades */
   }
+  .search{
+    width: 200px;
+  }
   
   @media (max-width: 576px) {
     .card-body {
