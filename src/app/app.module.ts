@@ -26,7 +26,6 @@ import { ClienteComponent } from './components/cliente/cliente-tabla/cliente.com
 import { EnvioRegistroComponent } from './components/envio/envio-registro/envio-registro.component';
 import { ClienteRegistroComponent } from './components/cliente/cliente-registro/cliente-registro.component';
 import { ClienteActualizarComponent } from './components/cliente/cliente-actualizar/cliente-actualizar.component';
-<<<<<<< Updated upstream
 import { EnvioActualizarComponent } from './components/envio/envio-actualizar/envio-actualizar.component';
 import { EmpleadoTablaComponent } from './components/empleado/empleado-tabla/empleado-tabla.component';
 import { EmpleadoRegistroComponent } from './components/empleado/empleado-registro/empleado-registro.component';
@@ -40,10 +39,10 @@ import { CategoriaActualizarComponent } from './components/categoria/categoria-a
 import { BotComponent } from './components/chatBot/bot/bot.component';
 import { SearchPipe } from './components/filter/search.pipe';
 import { FilterComponent } from './components/filter/filter.component';
-=======
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
->>>>>>> Stashed changes
+
+//parent of a670790 (vehiculo)
 
 @NgModule({
   declarations: [
@@ -56,7 +55,6 @@ import { ContactosComponent } from './components/contactos/contactos.component';
     EnvioRegistroComponent,
     ClienteRegistroComponent,
     ClienteActualizarComponent,
-<<<<<<< Updated upstream
     EnvioActualizarComponent,
     EmpleadoTablaComponent,
     EmpleadoRegistroComponent,
@@ -70,10 +68,8 @@ import { ContactosComponent } from './components/contactos/contactos.component';
     BotComponent,
     SearchPipe,
     FilterComponent,
-=======
     AcercadeComponent,
     ContactosComponent,
->>>>>>> Stashed changes
   ],
   imports: [
     MatSlideToggleModule,
