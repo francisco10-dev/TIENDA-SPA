@@ -116,7 +116,6 @@
     color: #ffc800;
 }
 
-<<<<<<< Updated upstream
 .sidebar .nav-link {
     display: flex;
     align-items: center;
@@ -126,17 +125,17 @@
     font-size:larger;
     margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
     text-decoration: none;
-=======
+
 .collapse{
     height: 30px;
->>>>>>> Stashed changes
+
 }
 
 .collapse .auth{
     margin-right:10px;
 }
 
-<<<<<<< Updated upstream
+
 .sidebar .nav-link i {
     margin-right: 10px; /* Ajusta el valor según el espacio deseado */
 }
@@ -174,7 +173,7 @@
     transform: scaleX(1);
 }
   
-=======
+
 .collapse ul li a{
     font-size:18px;
 }
