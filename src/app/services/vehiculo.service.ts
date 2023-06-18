@@ -42,4 +42,10 @@ export class VehiculoService {
     let header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
     return this._http.delete(this.url + 'vehiculo/' + vehiculoId, { headers: header });
   }
+
+  getById(vehiculoId: number): Observable<any>{
+    let header=new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+    return this._http.get(this.url+'vehiculo/'+vehiculoId,{headers:header});
+  }
+
 }
