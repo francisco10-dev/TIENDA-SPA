@@ -39,6 +39,9 @@ import { CategoriaActualizarComponent } from './components/categoria/categoria-a
 import { BotComponent } from './components/chatBot/bot/bot.component';
 import { SearchPipe } from './components/filter/search.pipe';
 import { FilterComponent } from './components/filter/filter.component';
+import { VehiculoTablaComponent } from './components/vehiculo/vehiculo-tabla/vehiculo-tabla.component';
+import { VehiculoRegistroComponent } from './components/vehiculo/vehiculo-registro/vehiculo-registro.component';
+import { VehiculoActualizarComponent } from './components/vehiculo/vehiculo-actualizar/vehiculo-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,9 @@ import { FilterComponent } from './components/filter/filter.component';
     BotComponent,
     SearchPipe,
     FilterComponent,
+    VehiculoTablaComponent,
+    VehiculoRegistroComponent,
+    VehiculoActualizarComponent,
   ],
   imports: [
     MatSlideToggleModule,
