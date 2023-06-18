@@ -26,9 +26,6 @@ import { ProveedorActualizarComponent } from './components/proveedor/proveedor-a
 import { CategoriaTablaComponent } from './components/categoria/categoria-tabla/categoria-tabla.component';
 import { CategoriaRegistroComponent } from './components/categoria/categoria-registro/categoria-registro.component';
 import { CategoriaActualizarComponent } from './components/categoria/categoria-actualizar/categoria-actualizar.component';
-import { VehiculoTablaComponent } from './components/vehiculo/vehiculo-tabla/vehiculo-tabla.component';
-import { VehiculoRegistroComponent } from './components/vehiculo/vehiculo-registro/vehiculo-registro.component';
-import { VehiculoActualizarComponent } from './components/vehiculo/vehiculo-actualizar/vehiculo-actualizar.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -58,9 +55,7 @@ const routes: Routes = [
     { path: 'categoria',component:CategoriaTablaComponent},
     { path: 'categoria-registro',component:CategoriaRegistroComponent},
     { path: 'categoria-actualizar/:idCategoria',component:CategoriaActualizarComponent},
-    { path: 'vehiculo',component:VehiculoTablaComponent},
-    { path: 'vehiculo-registro',component:VehiculoRegistroComponent},
-    { path: 'vehiculo-actualizar/:numUnidad',component:VehiculoActualizarComponent},
+
     
     { path: '**', redirectTo: '/login' } // Asegúrate de agregar el '/' antes de 'login'
 ];
