@@ -1,6 +1,9 @@
 //import { Component } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Usuario } from 'src/app/models/usuario';
+import{ UsuarioService } from '../../services/usuario.service';
+import{timer} from 'rxjs';
 
 @Component({
   selector: 'app-registro',
@@ -18,6 +21,42 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ])
   ]
 })
-export class RegistroComponent {
+export class RegistroComponent{
+    public usuario:Usuario;
+    public status:number;
+    constructor(
+      private _usuarioService:UsuarioService
+    ){
+      this.usuario=new Usuario(1,"","","rol",1,1);
+      this.status=-1;
+    }
+    onSubmit(form:any){
+      console.log(this.usuario);
+      let counter= timer(3000);
+      this._usuarioService.register(this.usuario).subscribe({
+        next:(response:any)=>{
+          this.status=0;
+          
+          counter.subscribe(
+            n=>{
+              this.status=-1;
+            }
+          );
+          console.log(response);
+          form.reset();
+        },
+        error:(err:Error)=>{
+          this.status=2;       
+          counter.subscribe(
+            n=>{
+              this.status=-1;
+            });
+          console.log(err);
+        }
+      });
+    }
+  
+  }
+  
 
-}
+

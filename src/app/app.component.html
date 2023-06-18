@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 p-0">
@@ -43,5 +44,231 @@
 </div>
 
 
+=======
+>>>>>>> Stashed changes
 
   
+    <!-- navbar -->
+    <header style="height:10vh">
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo"><span id="span1">E</span>Lectronic <span>Shop</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="../assets/images/menu.png" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/acercade']">Acerca de</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contactos']">Contáctanos</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 auth">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/login']"><img src="../assets/images/register.png" alt="" width="18px">Iniciar Sesión</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/registro']"><img src="../assets/images/register.png" alt="" width="18px">Registrarse</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar -->
+    
+
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Electronic Shop</h3>
+              <p>
+                Liberia <br>
+                Guanacaste<br>
+                Costa Rica <br>
+              </p>
+              <strong>Teléfono:</strong> 28478492 <br>
+              <strong>Email:</strong> electronicshop@.com <br>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Enlaces de utilidad</h4>
+             <ul>
+              <li><a [routerLink]="['/home']">Inicio</a></li>
+              <li><a [routerLink]="['/home']">Acerca de</a></li>
+              <li><a [routerLink]="['/home']">Servicios</a></li>
+              <li><a [routerLink]="['/home']">Términos de servicios</a></li>
+              <li><a [routerLink]="['/home']">Política de privacidad</a></li>
+             </ul>
+            </div>
+
+
+
+           
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Nuestros Productos</h4>
+
+             <ul>
+              <li><a [routerLink]="['/home']">Play 5</a></li>
+              <li><a [routerLink]="['/home']">Computadora</a></li>
+              <li><a [routerLink]="['/home']">Laptop Gaming</a></li>
+              <li><a [routerLink]="['/home']">Smartphone</a></li>
+              <li><a [routerLink]="['/home']">Gaming Gadget</a></li>
+             </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Nuestras redes sociales</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quibusdam.</p>
+
+              <div class="socail-links mt-3">
+                <a [routerLink]="['/home']"><i class="fa-brands fa-twitter"></i></a>
+                <a [routerLink]="['/home']"><i class="fa-brands fa-facebook-f"></i></a>
+                <a [routerLink]="['/home']"><i class="fa-brands fa-instagram"></i></a>
+                <a [routerLink]="['/home']"><i class="fa-brands fa-skype"></i></a>
+                <a [routerLink]="['/home']"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Electronic Shop</span></strong>. Todos los Derechos Reservados
+        </div>
+        <div class="credits">
+          Diseñado por <a href="#">SA coding</a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                  <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
+                  <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                  <li><a class="dropdown-item" href="#">Cameras</a></li>
+                  <li><a class="dropdown-item" href="#">Fridge</a></li>
+                  <li><a class="dropdown-item" href="#">AC</a></li>
+                  <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
+                  <li><a class="dropdown-item" href="#">Headphone</a></li>
+                  <li><a class="dropdown-item" href="#">Laptop</a></li>
+                  <li><a class="dropdown-item" href="#">PC Moniter</a></li>
+                </ul>
+              </li>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<header style="height: 8vh">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:100%">
+        <a class="navbar-brand" href="#">Tienda SPA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['/home']">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/login']">Acerca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/login']">Contacto</a>
+                </li>
+                    <li class="nav-item" *ngIf="!identity">
+                        <a class="nav-link" [routerLink]="['/login']">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item" *ngIf="!identity">
+                        <a class="nav-link" [routerLink]="['/registro']">Registrarse</a>
+                    </li>
+               
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/login']">Mi cuenta</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
+
+<footer class= "bg-dark text light" style="height: 100px">
+    <p style="color: white; text-align: center; padding-top:5px">
+      este es el footer
+    </p>
+    
+</footer>
+!-->

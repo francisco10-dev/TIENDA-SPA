@@ -3,8 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { HomeComponent } from './components/home/home.component';
+<<<<<<< Updated upstream
 import { EnvioComponent } from './components/envio/envio-tabla/envio.component';
 import { ClienteComponent } from './components/cliente/cliente-tabla/cliente.component';
+=======
+import { AcercadeComponent } from './components/acercade/acercade.component';
+import { ContactosComponent } from './components/contactos/contactos.component';
+import { EmpleadoComponent } from './components/empleado/empleado.component';
+import { EnvioComponent } from './components/envio-tabla/envio.component';
+import { ClienteComponent } from './components/cliente-tabla/cliente.component';
+>>>>>>> Stashed changes
 import { ClienteRegistroComponent } from './components/cliente/cliente-registro/cliente-registro.component';
 import { ClienteActualizarComponent } from './components/cliente/cliente-actualizar/cliente-actualizar.component';
 import { EnvioRegistroComponent } from './components/envio/envio-registro/envio-registro.component';
@@ -24,11 +32,19 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
     { path: 'home', component: HomeComponent },
+<<<<<<< Updated upstream
     { path: 'envio',component:EnvioComponent},
     { path: 'cliente',component:ClienteComponent},
     { path: 'empleado',component:EmpleadoTablaComponent},
     { path: 'empleado-registro',component:EmpleadoRegistroComponent},
     { path: 'empleado-actualizar/:idEmpleado',component:EmpleadoActualizarComponent},
+=======
+    { path: 'acercade', component: AcercadeComponent },
+    { path: 'contactos', component: ContactosComponent },
+    {path: 'empleado',component:EmpleadoComponent},
+    {path: 'envio',component:EnvioComponent},
+    {path: 'cliente',component:ClienteComponent},
+>>>>>>> Stashed changes
     { path: 'cliente-registro', component: ClienteRegistroComponent }, 
     { path: 'cliente-actualizar/:cedula', component: ClienteActualizarComponent },
     { path: 'envio-registro', component:EnvioRegistroComponent},
