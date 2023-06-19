@@ -10,9 +10,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+
+
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app.routing'; // Importa tu archivo personalizado
@@ -38,10 +41,8 @@ import { SearchPipe } from './components/filter/search.pipe';
 import { FilterComponent } from './components/filter/filter.component';
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
-import { VehiculoTablaComponent } from './components/vehiculo/vehiculo-tabla/vehiculo-tabla.component';
-import { VehiculoRegistroComponent } from './components/vehiculo/vehiculo-registro/vehiculo-registro.component';
-import { VehiculoActualizarComponent } from './components/vehiculo/vehiculo-actualizar/vehiculo-actualizar.component';
 
+//parent of a670790 (vehiculo)
 
 @NgModule({
   declarations: [
@@ -69,10 +70,6 @@ import { VehiculoActualizarComponent } from './components/vehiculo/vehiculo-actu
     FilterComponent,
     AcercadeComponent,
     ContactosComponent,
-    VehiculoTablaComponent,
-    VehiculoRegistroComponent,
-    VehiculoActualizarComponent,
-
   ],
   imports: [
     MatSlideToggleModule,
