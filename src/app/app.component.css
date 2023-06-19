@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 .sidebar {
     background-color: #2c3e50; /* Color de fondo oscuro */
     color: #fff; /* Color del texto en el sidebar */
@@ -11,7 +11,7 @@
     top: 0;
     height: 100vh;
   }
-=======
+
 *{
     margin: 0;
     padding: 0;
@@ -80,7 +80,7 @@
     }
 }
 /* top navbar */
->>>>>>> Stashed changes
+
 
 /* navbar */
 #navbar{
@@ -125,7 +125,7 @@
     font-size:larger;
     margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
     text-decoration: none;
-
+}
 .collapse{
     height: 30px;
 
@@ -282,6 +282,6 @@
 }
 #footer .credits a{
     color: #ffc800;
-}
+}   
 /* footer */
->>>>>>> Stashed changes
+
